@@ -16,6 +16,7 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, vendor/htc/primou/qcom-vendor.mk)
 
 # common msm7x30 configs
 $(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
@@ -53,10 +54,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vold.umsdirtyratio=20
 	
-# Inherit qcom proprietary blobs
-$(call inherit-product, vendor/qcom/proprietary/qcom-vendor.mk)
-
 DEVICE_PACKAGE_OVERLAYS += device/htc/primou/overlay
+DEVICE_PACKAGE_OVERLAYS += vendor/aokp/overlay/primou
 
 # GPS / Lights / Sensors
 PRODUCT_PACKAGES += \
