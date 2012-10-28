@@ -93,6 +93,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/primou/prebuilt/etc/vold.fstab:system/etc/vold.fstab
 
+PRODUCT_COPY_FILES += \
+    device/htc/primou/prebuilt/app/GooManager.apk:system/app/GooManager.apk
 # Kernel modules
 #PRODUCT_COPY_FILES += \
 
@@ -118,3 +120,9 @@ $(call inherit-product, device/htc/primou/media_a1026.mk)
 $(call inherit-product, device/htc/primou/media_htcaudio.mk)
 
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
+
+# Goo Manager support
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.goo.developerid=gannon5197
+    ro.goo.rom=aokp_primou
+    ro.goo.version=$(shell date +%s)
