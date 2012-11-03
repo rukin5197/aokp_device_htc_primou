@@ -50,8 +50,8 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
 TARGET_PROVIDES_LIBLIGHTS := true
 #BOARD_USES_LEGACY_RIL := true
 
-BOARD_HAVE_HTC_FFC := true
-BOARD_USE_REVERSE_FFC := true
+BOARD_HAVE_HTC_FFC := false
+BOARD_USE_REVERSE_FFC := false
 
 COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE -DSCREEN_RELEASE -DREFRESH_RATE=60 -DRIL_VERSION_2_SUPPORT -DQCOM_NO_SECURE_PLAYBACK
 
@@ -110,10 +110,6 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 # Actual UMS different from TWRP for some reason
 
 BOARD_UMS_LUNFILE := /sys/class/android_usb/f_mass_storage/lun0/file
-
-#Lun File testing
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_otg/msm_hsusb/gadget/lun1/file
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_otg/msm_hsusb/gadget/lun2/file
 
 # Script
 
