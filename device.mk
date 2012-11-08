@@ -66,9 +66,8 @@ PRODUCT_PACKAGES += \
 
 # Additional packages
 PRODUCT_PACKAGES += \
-     Torch \
-     FileExplorer \
-     PinyinIME 
+    Torch \
+    PinyinIME 
 
 # idc files
 PRODUCT_COPY_FILES += \
@@ -91,8 +90,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/primou/prebuilt/etc/vold.fstab:system/etc/vold.fstab
 
-# Kernel modules
-#PRODUCT_COPY_FILES += \
+# init.d files
+PRODUCT_COPY_FILES += \
+    device/htc/primou/prebuilt/etc/init.d/01swap:system/etc/init.d/01swap
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/htc/primou/prebuilt/root/kernel
