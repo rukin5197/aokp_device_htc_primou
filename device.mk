@@ -54,6 +54,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vold.umsdirtyratio=20
 	
+# Inherit qcom proprietary blobs
+#$(call inherit-product, vendor/qcom/proprietary/qcom-vendor.mk)
+
 DEVICE_PACKAGE_OVERLAYS += device/htc/primou/overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/aokp/overlay/primou
 
@@ -65,9 +68,8 @@ PRODUCT_PACKAGES += \
 
 # Additional packages
 PRODUCT_PACKAGES += \
-     Torch \
-     FileExplorer \
-	 PinyinIME \
+    Torch \
+    PinyinIME 
 
 # idc files
 PRODUCT_COPY_FILES += \
@@ -90,10 +92,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/primou/prebuilt/etc/vold.fstab:system/etc/vold.fstab
 
+# init.d files
 PRODUCT_COPY_FILES += \
-    device/htc/primou/prebuilt/app/GooManager.apk:system/app/GooManager.apk
-# Kernel modules
-#PRODUCT_COPY_FILES += \
+    device/htc/primou/prebuilt/etc/init.d/01swap:system/etc/init.d/01swap
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/htc/primou/prebuilt/root/kernel

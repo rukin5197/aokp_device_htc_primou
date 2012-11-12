@@ -37,42 +37,7 @@ BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=primou no_console_s
 BOARD_KERNEL_BASE := 0x14300000
 BOARD_KERNEL_PAGE_SIZE := 4096
 
-TARGET_ARCH := arm
-TARGET_USE_SCORPION_BIONIC_OPTIMIZATION := true
-TARGET_USE_SCORPION_PLD_SET := true
-TARGET_SCORPION_BIONIC_PLDOFFS := 6
-TARGET_SCORPION_BIONIC_PLDSIZE := 128
-
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := primou
-BOARD_VENDOR_QCOM_AMSS_VERSION := 1200
-BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
-
 TARGET_PROVIDES_LIBLIGHTS := true
-#BOARD_USES_LEGACY_RIL := true
-
-BOARD_HAVE_HTC_FFC := true
-BOARD_USE_REVERSE_FFC := true
-
-COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE -DSCREEN_RELEASE -DREFRESH_RATE=60 -DRIL_VERSION_2_SUPPORT -DQCOM_NO_SECURE_PLAYBACK
-
-BOARD_PREBUILT_LIBAUDIO := false
-BOARD_USES_QCOM_AUDIO_VOIPMUTE := false
-BOARD_USES_QCOM_AUDIO_RESETALL := false
-BOARD_ADRENO_DECIDE_TEXTURE_TARGET := true
-
-
-# Wifi related defines
-WIFI_BAND                        := 802_11_ABG
-WPA_SUPPLICANT_VERSION           := VER_0_8_X
-BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
-BOARD_HOSTAPD_DRIVER             := NL80211
-BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_bcmdhd
-BOARD_WLAN_DEVICE                := bcmdhd
-WIFI_DRIVER_FW_PATH_STA          := "/system/etc/firmware/fw_bcmdhd.bin"
-WIFI_DRIVER_FW_PATH_AP           := "/system/etc/firmware/fw_bcmdhd_apsta.bin"
-WIFI_DRIVER_FW_PATH_P2P          := "/system/etc/firmware/fw_bcmdhd_p2p.bin"
-WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcmdhd/parameters/firmware_path"
 
 # cat /proc/emmc
 #dev:        size     erasesize name
@@ -110,10 +75,6 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 # Actual UMS different from TWRP for some reason
 
 BOARD_UMS_LUNFILE := /sys/class/android_usb/f_mass_storage/lun0/file
-
-#Lun File testing
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_otg/msm_hsusb/gadget/lun1/file
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_otg/msm_hsusb/gadget/lun2/file
 
 # Script
 
