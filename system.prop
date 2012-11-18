@@ -35,7 +35,7 @@ ro.ril.hsxpa=2
 ro.telephony.default_network=0
 
 wifi.interface=wlan0
-wifi.supplicant_scan_interval=15
+wifi.supplicant_scan_interval=120
 
 mobiledata.interfaces=gannet0,rmnet0,rmnet1,rmnet2
 
@@ -47,7 +47,8 @@ ro.opengles.version=131072
 ro.ril.def.agps.mode=2
 
 # For HSDPA low throughput
-ro.ril.disable.power.collapse=1
+ro.ril.disable.power.collapse=0
+pm.sleep_mode=1
 
 # Properties of Scalado Denoise param.
 postprocess.iso_midband=400
