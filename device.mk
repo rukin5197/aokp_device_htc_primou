@@ -96,9 +96,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/primou/prebuilt/etc/init.d/01swap:system/etc/init.d/01swap
 
+# patched zram scripts
 PRODUCT_COPY_FILES += \
     device/htc/primou/prebuilt/bin/compcache:system/bin/compcache \
     device/htc/primou/prebuilt/bin/handle_compcache:system/bin/handle_compcache
+
+# bluez config
+PRODUCT_COPY_FILES += \
+    device/htc/primou/prebuilt/etc/dbus.conf:/etc/dbus.conf \
+    device/htc/primou/prebuilt/etc/dbus-1/system-services/org.bluez.service:/etc/dbus-1/system-services/org.bluez.service
+
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/htc/primou/prebuilt/root/kernel
