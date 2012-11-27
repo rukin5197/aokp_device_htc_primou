@@ -34,7 +34,7 @@
     <!-- Don't mess with the preview size, always use preferred size from parameters -->
     <bool name="alwaysUsePreferredPreviewSize">false</bool>
     <!-- Disable face detection on the front camera -->
-    <bool name="noFaceDetectOnFrontCamera">false</bool>
+    <bool name="noFaceDetectOnFrontCamera">true</bool>
     <!-- Disable face detection on the rear camera -->
     <bool name="noFaceDetectOnRearCamera">false</bool>
     <!-- Use ZSL mode -->
