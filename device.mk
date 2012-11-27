@@ -69,7 +69,8 @@ PRODUCT_PACKAGES += \
 # Additional packages
 PRODUCT_PACKAGES += \
     Torch \
-    PinyinIME 
+    PinyinIME \
+    HwaSettings
 
 # idc files
 PRODUCT_COPY_FILES += \
