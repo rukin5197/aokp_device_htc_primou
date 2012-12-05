@@ -58,3 +58,6 @@ ro.camera.sound.disabled=1
 persist.sys.usb.config=mass_storage,adb
 
 dalvik.vm.dexopt-data-only=1
+
+# keep those apps in memory
+sys.keep_apps=com.android.mms,com.android.contacts
